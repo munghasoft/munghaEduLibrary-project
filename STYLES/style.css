@@ -1,0 +1,165 @@
+/*============================================
+CUSTOM VARIABLES
+====================================== */
+
+:root {
+    --background: #111c2d;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #2a3a50;
+    --cards: #18263a; 
+}
+
+
+/*============================================
+GENERAL STYLES
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/*============================================
+HEADER SECTION
+====================================== */
+
+.site-header {
+    background-color: var(--cards);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*============================================
+LOGO
+====================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 2.5rem;
+}
+
+/*============================================
+NAVIGATION
+====================================== */
+
+.main-nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--muted);
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.nav-link.active {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+
+/*============================================
+HEADER ACTIONS
+====================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.icon-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: var(--muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icon-btn:hover {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1rem;
+    color: var(--text);
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.login-btn i {
+    font-size: 1.1rem;
+}
+
+.login-btn:hover {
+    color: var(--muted);
+}
+
+.menu-toggle i {
+    font-size: 1.4rem;
+}
