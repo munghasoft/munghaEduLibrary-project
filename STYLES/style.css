@@ -110,6 +110,30 @@ NAVIGATION
 
 
 /*============================================
+CLOSE MENU BUTTON
+====================================== */
+.menu-close {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background-color: transparent;
+    color: var(--muted);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.menu-close i {
+    font-size: 1.4rem;
+}
+
+.menu-close:hover {
+    background-color: var(--background);
+}
+/*============================================
 HEADER ACTIONS
 ====================================== */
 
@@ -160,6 +184,81 @@ HEADER ACTIONS
     color: var(--muted);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .menu-toggle i {
     font-size: 1.4rem;
+}
+
+/*============================================
+RESPONSIVE DESIGN
+====================================== */
+
+
+/*is menu open class */
+
+.main-nav.menu-open {
+    right: 0;
+}
+
+
+@media (max-width: 48rem) {
+
+    .header-container {
+        padding: 0.8rem 1rem;
+
+        .logo {
+        font-size: 1.05rem;
+    }
+
+    .logo img {
+        width: 2rem;
+    }
+
+    }
+    .main-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 18rem;
+        height: 100vh;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: var(--cards);
+        box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-close {
+        display: flex;
+        align-self: flex-end;
+    }
+
+}
+
+@media (max-width: 30rem) {
+
+    .login-btn span {
+        display: none;
+    }
 }
